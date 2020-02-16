@@ -1,4 +1,4 @@
-# web-reg
+# preact-express-template
 
 ### Features
 - Watch mode and hot module reloading for Preact application.
