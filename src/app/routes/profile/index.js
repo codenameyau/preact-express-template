@@ -5,7 +5,6 @@ import { request } from 'app/utils';
 const StyledProfile = styled.div`
   padding: 50px 20px;
   min-height: 100%;
-  width: 100%;
 `;
 
 export default class Profile extends Component {

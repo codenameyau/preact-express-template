@@ -4,7 +4,6 @@ import { h } from 'preact';
 const StyledHome = styled.div`
   padding: 50px 20px;
   min-height: 100%;
-  width: 100%;
 `;
 
 const Home = () => {
