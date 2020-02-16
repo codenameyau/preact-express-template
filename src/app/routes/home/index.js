@@ -10,8 +10,11 @@ const StyledHome = styled.div`
 const Home = () => {
   return (
     <StyledHome>
-      <h1>Home</h1>
-      <p>This is the Home component.</p>
+      <h1>Hooray!!! Your app is up and running!</h1>
+      <p>
+        Go ahead. Try updating the Preact app or Express server code and refresh the page.
+        It should update without having to re-run <strong>yarn start</strong>
+      </p>
       <p>
         <a href="/api"> Click here to visit the API</a>
       </p>

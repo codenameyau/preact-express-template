@@ -1,11 +1,17 @@
 import { h, Component } from 'preact';
 import { Router } from 'preact-router';
-
+import { createGlobalStyle } from 'styled-components';
 import Header from './header';
 
 // Code-splitting is automated for routes
 import Home from '../routes/home';
 import Profile from '../routes/profile';
+
+const GlobalStyle = createGlobalStyle`
+  * {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+`;
 
 export default class App extends Component {
   handleRoute = e => {
@@ -15,6 +21,7 @@ export default class App extends Component {
   render() {
     return (
       <div id="app">
+        <GlobalStyle />
         <Header />
         <Router onChange={this.handleRoute}>
           <Home path="/" />

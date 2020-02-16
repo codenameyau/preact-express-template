@@ -1,5 +1,12 @@
+import styled from 'styled-components';
 import { h, Component } from 'preact';
 import { request } from 'app/utils';
+
+const StyledProfile = styled.div`
+  padding: 50px 20px;
+  min-height: 100%;
+  width: 100%;
+`;
 
 export default class Profile extends Component {
   state = {
@@ -21,8 +28,8 @@ export default class Profile extends Component {
     // start a timer for the clock:
     this.timer = setInterval(this.updateTime, 1000);
 
+    // Make sample API request.
     request('/api/');
-    request('/apis/api/v1/cards/all');
   }
 
   // gets called just before navigating away from the route
@@ -33,7 +40,7 @@ export default class Profile extends Component {
   // Note: `user` comes from the URL, courtesy of our router
   render({ user }, { time, count }) {
     return (
-      <div>
+      <StyledProfile>
         <h1>Profile: {user}</h1>
         <p>This is the user profile for a user named {user}.</p>
 
@@ -42,7 +49,7 @@ export default class Profile extends Component {
         <p>
           <button onClick={this.increment}>Click Me</button> Clicked {count} times.
         </p>
-      </div>
+      </StyledProfile>
     );
   }
 }
