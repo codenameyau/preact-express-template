@@ -1,6 +1,6 @@
 # web-reg
 
-## Features
+### Features
 - Watch mode and hot module reloading for Preact application.
 - Watch mode for our node Express server.
 - Preact application comes with styled-components, storybook, enzyme tests.
@@ -25,7 +25,7 @@ yarn start
 ```
 
 #### Other Commands
-```
+```bash
 # Run unit tests with Jest and Enzyme.
 yarn test
 

@@ -22,6 +22,7 @@
     "curly": "warn",
     "brace-style": "off",
     "arrow-body-style": "off",
+    "new-cap": "off",
     "object-shorthand": ["warn", "properties"],
     "comma-dangle": ["warn", {
       "arrays": "only-multiline",
