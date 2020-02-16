@@ -1,0 +1,24 @@
+{
+  "name": "preact-express-template",
+  "version": "1.0.0",
+  "description": "Preact application with express server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codenameyau/preact-express-template.git"
+  },
+  "keywords": [
+    "preact",
+    "express",
+    "template"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codenameyau/preact-express-template/issues"
+  },
+  "homepage": "https://github.com/codenameyau/preact-express-template#readme"
+}
