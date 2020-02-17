@@ -12,7 +12,9 @@
     "test:ci": "jest",
     "lint": "eslint src",
     "prettier": "prettier --write '**/*.js'",
-    "analyze": "source-map-explorer ./build/*.{js,map}"
+    "analyze": "source-map-explorer ./build/*.{js,map}",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "application": {
     "server": {
@@ -39,6 +41,13 @@
     "@babel/core": "^7.8.4",
     "@babel/node": "^7.8.4",
     "@babel/preset-env": "^7.8.4",
+    "@storybook/addon-a11y": "^5.3.13",
+    "@storybook/addon-actions": "^5.3.13",
+    "@storybook/addon-links": "^5.3.13",
+    "@storybook/addon-viewport": "^5.3.13",
+    "@storybook/addons": "^5.3.13",
+    "@storybook/preact": "^5.3.13",
+    "babel-loader": "^8.0.6",
     "babel-watch": "^7.0.0",
     "concurrently": "^5.1.0",
     "enzyme": "^3.10.0",
