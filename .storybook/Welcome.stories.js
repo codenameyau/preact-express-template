@@ -1,34 +1,14 @@
 import { h } from 'preact';
+import styled from 'styled-components';
 import { linkTo } from '@storybook/addon-links';
 
-const Main = props => (
-  <article
-    {...props}
-    style={{
-      padding: 15,
-      lineHeight: 1.4,
-      fontFamily: '"Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif',
-      backgroundColor: '#ffffff',
-    }}
-  />
-);
+const Main = styled.div`
+  padding: 1em;
+`;
+
+Main.displayName = 'Main';
 
 const Title = ({ children, ...props }) => <h1 {...props}>{children}</h1>;
-
-const InlineCode = props => (
-  <code
-    {...props}
-    style={{
-      fontSize: 15,
-      fontWeight: 600,
-      padding: '2px 5px',
-      border: '1px solid #eae9e9',
-      borderRadius: 4,
-      backgroundColor: '#f3f2f2',
-      color: '#3a3a3a',
-    }}
-  />
-);
 
 const Link = ({ children, href, ...props }) => (
   <a
@@ -67,44 +47,31 @@ const NavButton = ({ children, ...props }) => (
   </button>
 );
 
-const Welcome = ({ showApp }) => (
+const Welcome = () => (
   <Main>
     <Title>Welcome to storybook</Title>
     <p>This is a UI component dev environment for your app.</p>
     <p>
-      We've added some basic stories inside the <InlineCode>src/stories</InlineCode>{' '}
-      directory.
-      <br />A story is a single state of one or more UI components. You can have as many
-      stories as you want.
-      <br />
-      (Basically a story is like a visual test case.)
-    </p>
-    <p>
-      See these sample <NavButton onClick={showApp}>stories</NavButton> for a component
-      called&nbsp;
-      <InlineCode>Button</InlineCode>.
+      A story is a single state of one or more UI components. You can have as many stories
+      as you want. Basically a story is like a visual test case.
     </p>
     <p>
       Just like that, you can add your own components as stories.
       <br />
       You can also edit those components and see changes right away.
-      <br />
-      (Try editing the <InlineCode>Button</InlineCode> stories located at&nbsp;
-      <InlineCode>src/stories/1-Button.stories.js</InlineCode>
-      .)
     </p>
     <p>
       Usually we create stories with smaller UI components in the app.
       <br />
-      Have a look at the&nbsp;
+      Have a look at the{' '}
       <Link
         href="https://storybook.js.org/basics/writing-stories"
         target="_blank"
         rel="noopener noreferrer"
       >
         Writing Stories
-      </Link>
-      &nbsp;section in our documentation.
+      </Link>{' '}
+      section in our documentation.
     </p>
   </Main>
 );
@@ -114,7 +81,7 @@ export default {
   component: Welcome,
 };
 
-export const ToStorybook = () => <Welcome showApp={linkTo('Button')} />;
+export const ToStorybook = () => <Welcome />;
 
 ToStorybook.story = {
   name: 'to Storybook',
