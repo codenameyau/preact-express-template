@@ -14,6 +14,10 @@
     "jsx": true,
     "modules": true
   },
+	"globals": {
+		"mount": "readonly",
+		"shallow": "readonly"
+	},
   "rules": {
     "indent": ["warn", 2],
     "no-undef": "error",

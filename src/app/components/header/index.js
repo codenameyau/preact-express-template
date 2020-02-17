@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { h } from 'preact';
 import { Link } from 'preact-router/match';
 
-const StyledHeader = styled.header`
+export const StyledHeader = styled.header`
   position: fixed;
   left: 0;
   top: 0;
@@ -51,7 +51,7 @@ const StyledHeader = styled.header`
   }
 `;
 
-const Header = () => (
+export const Header = () => (
   <StyledHeader>
     <h1>Preact Express App</h1>
     <nav>
