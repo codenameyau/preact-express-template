@@ -1,4 +1,5 @@
 import { h } from 'preact';
+import { linkTo } from '@storybook/addon-links';
 
 const Main = props => (
   <article
@@ -12,17 +13,7 @@ const Main = props => (
   />
 );
 
-// eslint-disable-next-line react/prop-types
 const Title = ({ children, ...props }) => <h1 {...props}>{children}</h1>;
-
-const Note = props => (
-  <p
-    {...props}
-    style={{
-      opacity: 0.5,
-    }}
-  />
-);
 
 const InlineCode = props => (
   <code
@@ -39,7 +30,6 @@ const InlineCode = props => (
   />
 );
 
-// eslint-disable-next-line react/prop-types
 const Link = ({ children, href, ...props }) => (
   <a
     href={href}
@@ -55,7 +45,6 @@ const Link = ({ children, href, ...props }) => (
   </a>
 );
 
-// eslint-disable-next-line react/prop-types
 const NavButton = ({ children, ...props }) => (
   <button
     {...props}
@@ -78,7 +67,6 @@ const NavButton = ({ children, ...props }) => (
   </button>
 );
 
-/* eslint-disable-next-line react/prop-types */
 const Welcome = ({ showApp }) => (
   <Main>
     <Title>Welcome to storybook</Title>
@@ -118,13 +106,16 @@ const Welcome = ({ showApp }) => (
       </Link>
       &nbsp;section in our documentation.
     </p>
-    <Note>
-      <b>NOTE:</b>
-      <br />
-      Have a look at the <InlineCode>.storybook/webpack.config.js</InlineCode> to add
-      webpack loaders and plugins you are using in this project.
-    </Note>
   </Main>
 );
 
-export { Welcome as default };
+export default {
+  title: 'Welcome',
+  component: Welcome,
+};
+
+export const ToStorybook = () => <Welcome showApp={linkTo('Button')} />;
+
+ToStorybook.story = {
+  name: 'to Storybook',
+};

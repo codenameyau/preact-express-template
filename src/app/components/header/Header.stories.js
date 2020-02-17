@@ -1,9 +1,8 @@
 import { h } from 'preact';
 import Header from '.';
 
-export const HeaderStory = () => <Header />;
+export const withText = () => <Header>Hello Header</Header>;
 
-export default {
-  title: 'Header',
-  component: HeaderStory,
-};
+export const withEmoji = () => <Header />;
+
+export default { title: 'Header', component: Header };
