@@ -6,7 +6,7 @@
 - Preact application comes with styled-components and storybook.
 - Express server comes with proxy, middleware, logging.
 - Workflow: Prettier, eslint, imagemin is run on every commit.
-- ES7 support with import statements on both client app and server.
+- Isomorphic absolute ES6 import statements on both client app and server.
 - Jest has been setup with enzyme and enzyme-adapter-preact-pure.
 - Project is setup for heroku deployment.
 
