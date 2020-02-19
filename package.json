@@ -75,11 +75,11 @@
       "node ./bin/minify-images.js",
       "git add"
     ],
-    "*.{js,jsx}": [
-      "prettier --write",
+    "*.js": [
       "eslint",
-      "git add",
-      "jest --bail --listTests --findRelatedTests --passWithNoTests"
+      "jest --bail --findRelatedTests",
+      "prettier --write",
+      "git add"
     ]
   },
   "jest": {
