@@ -78,8 +78,8 @@
     "*.{js,jsx}": [
       "prettier --write",
       "eslint",
-      "jest --bail --listTests --findRelatedTests --passWithNoTests",
-      "git add"
+      "git add",
+      "jest --bail --listTests --findRelatedTests --passWithNoTests"
     ]
   },
   "jest": {
