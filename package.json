@@ -72,7 +72,7 @@
   },
   "lint-staged": {
     "*.js": [
-      "jest --bail --findRelatedTests --passWithNoTests"
+      "jest --ci --bail --listTests --findRelatedTests --passWithNoTests"
     ],
     "*.{png,jpeg,jpg,svg}": [
       "node ./bin/minify-images.js",
