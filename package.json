@@ -76,9 +76,8 @@
       "git add"
     ],
     "*.js": [
-      "eslint",
-      "jest --bail --findRelatedTests",
       "prettier --write",
+      "eslint",
       "git add"
     ]
   },
