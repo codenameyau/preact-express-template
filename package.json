@@ -71,9 +71,6 @@
     "source-map-explorer": "^2.2.2"
   },
   "lint-staged": {
-    "*.js": [
-      "jest --ci --bail --listTests --findRelatedTests --passWithNoTests"
-    ],
     "*.{png,jpeg,jpg,svg}": [
       "node ./bin/minify-images.js",
       "git add"
@@ -81,6 +78,7 @@
     "*.{js,jsx}": [
       "prettier --write",
       "eslint",
+      "jest --bail --listTests --findRelatedTests --passWithNoTests",
       "git add"
     ]
   },
