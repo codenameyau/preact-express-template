@@ -1,4 +1,4 @@
-import HeaderDefault, { Header, StyledHeader } from '.';
+import HeaderDefault, { Header, StyledHeader } from './Header';
 
 describe('Header', () => {
   it('should render StyledHeader', () => {

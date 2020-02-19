@@ -1,5 +1,5 @@
 import { h } from 'preact';
-import Header from '.';
+import Header from './Header';
 
 export const defaultHeader = () => <Header>Hello Header</Header>;
 
