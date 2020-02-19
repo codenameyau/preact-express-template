@@ -71,8 +71,8 @@
     "source-map-explorer": "^2.2.2"
   },
   "lint-staged": {
-    "*.{js}": [
-      "jest --bail -o"
+    "*.js": [
+      "jest --bail -o --passWithNoTests"
     ],
     "*.{png,jpeg,jpg,svg}": [
       "node ./bin/minify-images.js",
