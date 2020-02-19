@@ -1,7 +1,7 @@
 import { h, Component } from 'preact';
 import { Router } from 'preact-router';
 import { createGlobalStyle } from 'styled-components';
-import Header from 'app/components';
+import { Header } from 'app/components';
 
 // Code-splitting is automated for routes
 import Home from 'app/routes/home';
