@@ -6,6 +6,11 @@ export const defaultOptions = {
   },
 };
 
+/**
+ * @param  {string} url
+ * @param  {object} options=defaultOptions
+ * @returns  {Promise}
+ */
 export const request = (url, options = defaultOptions) => {
   if (options.body && options.headers['Content-Type'] === 'application/json') {
     options.body = JSON.stringify(options.body);
